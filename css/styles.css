@@ -1,0 +1,27 @@
+body {
+    background-color: lightgray;
+}
+
+.container {
+    max-width: 1360px;
+}
+
+.footer {
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.footer  a   {
+        color: white;
+        text-decoration: none;
+        background-color: transparent
+    }
+    .footer  p   {
+        color: white;
+        text-decoration: none;
+        background-color: transparent
+    }
+.body-color {
+    background-color: white;
+    padding-top:10px;
+    border-radius: 10px;
+}
