@@ -2,6 +2,7 @@ body {
     background-color: lightgray;
 }
 
+
 .container {
     max-width: 1360px;
 }
@@ -25,3 +26,12 @@ body {
     padding-top:10px;
     border-radius: 10px;
 }
+ .stuff {
+     color: black;
+ }
+
+ .smaller {
+     margin-left: 15px;
+     size: pt;
+ }
+ 
