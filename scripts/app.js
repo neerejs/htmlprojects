@@ -40,26 +40,46 @@
 // });
 
 
-(function() {
+(function () {
   'use strict';
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
+    var validation = Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
         }
-       
+
         form.classList.add('was-validated');
         event.preventDefault();
         let fname = $("#fname").val();
-        let grade =$("input[name=GradeRadio]:checked").val()
-        alert ("fname:" + fname +"\n" + "Grade:" + grade);
+        let email = $("#email").val();
+        let age = $("#age").val();
+        // let red = $("#redCheck").val();
+        // let blue = $("#blueCheck").val();
+        // let green = $("#greenCheck").val();
+        let grade = $("input[name=GradeRadio]:checked").val()
+        let color = $("input[name=colorPick]:checked").val()
+        let color2 = $("input[name=colorPick2]:checked").val()
+        let color3 = $("input[name=colorPick3]:checked").val()
+        let college = $("#college").val();
+        alert("fname:" + fname + "\n" +
+          "Email:" + email + "\n" +
+          "Age:" + age + "\n" +
 
-       
+          "color:" + color + "\n" +
+          "color2:" + color2 + "\n" +
+          "color3:" + color3 + "\n" +
+          // "blue:" + blue +"\n" +
+          // "green:" + green +"\n" +
+          "grade:" + grade + "\n" +
+          "school:" + college
+        );
+
+
       }, false);
     });
   }, false);
@@ -89,19 +109,48 @@ async function fetchText() {
 
   }
 }
+async function photso (){
+  const response = await fetch ("https:jsonplaceholder.typicode.com/photos/");
+  const data = await response.json();
+  let output = "";
+  data.forEach((item) => {
+     
+  });
+
+  $("#cardStuff").html(output);
+}
 
 function header() {
 
   let headerhtml = "<div class='row'><div class='col-sm-12' style='padding-left:0px;padding-right:0px'> <img src='./images/red_banner.png' class='img-fluid rounded' style='width:1360px;margin-top:20px;margin-bottom:20px' /> </div></div>";
-  $("#header").html(headerhtml );
+  $("#header").html(headerhtml);
 
 }
+
+function footer() {
+
+  //let footerhtml = "<div class='row'><div class='col-sm-12' style='padding-left:0px;padding-right:0px'> <img src='./images/ruFooter.png' class='img-fluid rounded' style='width:1360px;margin-top:20px;margin-bottom:20px' /> </div></div>";
+  let footerhtml = "<div class='row footer' style='background-color: black;padding-top:30px;padding-bottom:30px'><div class='col-sm-1'><img src='./images/rlogo.png' class='img-fluid rounded' /></div><div class='col-sm-3'><p style='text-align:center'><a href='http://www.google.com'>Google</a></p><p style='text-align:center'><a href='http://www.google.com'>Google</a></p><p style='text-align:center'><a href='http://www.google.com'>Google</a> </p></div><div class='col-sm-3'><p style='text-align:center'><a href='http://www.google.com'>Google</a></p><p style='text-align:center'><a href='http://www.google.com'>Google</a></p><p style='text-align:center'><a href='http://www.google.com'>Google</a> </p></div><div class='col-sm-3'><p style='text-align:center'><a href='http://www.google.com'>Google</a></p><p style='text-align:center'><a href='http://www.google.com'>Google</a></p><p style='text-align:center'><a href='http://www.google.com'>Google</a> </p></div></div>"
+  $("#footer").html(footerhtml);
+
+}
+
 $(document).ready(function () {
   header();
+  footer();
   fetchText();
 })
 
+// function footer() {
 
+//   let footerhtml = "<div class='row'><div class='col-sm-12' style='padding-left:0px;padding-right:0px'> <img src='./images/ruFooter.png' class='img-fluid rounded' style='width:1360px;margin-top:20px;margin-bottom:20px' /> </div></div>";
+//   $("#footer").html(footerhtml);
+
+// }
+// $(document).ready(function () {
+//   footer();
+//   fetchText();
+// })
 
 
 

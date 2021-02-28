@@ -80,19 +80,19 @@
 
                     <label>Colors of the Flag</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox"  id="redCheck">
+                        <input class="form-check-input" type="checkbox"  id="redCheck" name="colorPick" value="Red">
                         <label class="form-check-label" for="redCheck">
                             Red
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox"  id="blueCheck">
+                        <input class="form-check-input" type="checkbox"  id="blueCheck" name="colorPick2" value="Blue">
                         <label class="form-check-label" for="bluetCheck">
                             Blue
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox"  id="greenCheck">
+                        <input class="form-check-input" type="checkbox"  name="colorPick3" id="greenCheck" value="Green">
                         <label class="form-check-label" for="greenCheck">
                             Green
                         </label>
@@ -127,10 +127,10 @@
                         <label for="exampleFormControlSelect1">College</label>
                         <select class="form-control" id="college" required>
                             <option value="">Choose...</option>
-                            <option value="1">Arts & Sciences</option>
-                            <option value="2">Engineering</option>
-                            <option value="3">Pharmacy</option>
-                            <option value="4">Business</option>
+                            <option value="Arts & Sciences">Arts & Sciences</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Business">Business</option>
                         </select>
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">College is required</div>
@@ -169,7 +169,7 @@
         </div>
 
 
-        <div class="row footer" style="background-color: black;padding-top:30px;padding-bottom:30px">
+        <!-- <div class="row footer" style="background-color: black;padding-top:30px;padding-bottom:30px">
 
             <div class="col-sm-1">
                 <img src="./images/rlogo.png" class="img-fluid rounded" />
@@ -195,8 +195,12 @@
 
             </div>
 
-        </div>
+        </div> -->
 
+    </div>
+
+    <div class="container" id="footer">
+        <!-- this will generated from the script -->
     </div>
 
     <script src="./scripts/app.js"></script>
