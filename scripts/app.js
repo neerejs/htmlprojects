@@ -41,6 +41,36 @@ $("#submit-btn").click(function(event) {
 
     
 
+    async function fetchText() {
+      let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  
+      console.log(response.status); // 200
+      console.log(response.statusText); // OK
+  
+      if (response.status === 200) {
+          let data = await response.json();
+          let outputhtml="";
+          data.forEach ((item) => {
+
+            outputhtml = outputhtml +  "<tr> <th scope='row'>" + item.id + "</th><td>" + item.userId +"</td><td>"+ item.title+"</td></tr>"
+
+             });
+
+             console.log (outputhtml);
+             document.getElementById("table-content").innerHTML=outputhtml;
+           
+        
+      }
+  }
+  
+  $( document ).ready(function() {
+    fetchText();
+  })
+
+
+
+
+
 
 // function validateForm() {
 //     $(document).ready(function(){
