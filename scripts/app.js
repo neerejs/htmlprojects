@@ -87,7 +87,7 @@
 
 
 
-async function fetchText() {
+async function getPosts() {
   let response = await fetch('https://jsonplaceholder.typicode.com/posts');
 
   console.log(response.status); // 200
@@ -109,12 +109,29 @@ async function fetchText() {
 
   }
 }
-async function photso (){
-  const response = await fetch ("https:jsonplaceholder.typicode.com/photos/");
+async function getPhotos() {
+  const response = await fetch("https:jsonplaceholder.typicode.com/photos/");
   const data = await response.json();
   let output = "";
-  data.forEach((item) => {
-     
+ 
+  data.forEach((item, index) => {
+
+    if (index < 4) {
+      let id = "card"+ index
+
+      output += `<div class="col-sm-3 ">
+    <div class="card" style="width: 100%" id=${id}>
+    <img src= ${item.url} class="card-img-top" alt="...">
+    <div class="card-body" >
+    <h5 class="card-title"> ${item.title}</h5>
+    
+    </div>
+    </div>
+    </div> 
+        
+    `
+    }
+
   });
 
   $("#cardStuff").html(output);
@@ -138,7 +155,8 @@ function footer() {
 $(document).ready(function () {
   header();
   footer();
-  fetchText();
+  getPosts();
+  getPhotos();
 })
 
 // function footer() {
