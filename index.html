@@ -22,13 +22,9 @@
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="">
-                <img src="./images/red_banner.png" class="img-fluid rounded" width=10000px;
-                    style="margin-top:20px;margin-bottom:20px" />
-            </div>
-        </div>
+
+    <div class="container" id="header">
+        <!-- this will generated from the script -->
     </div>
     <div class="container">
 
@@ -48,7 +44,7 @@
 
             <div class="col-sm-6">
 
-                <form id="my-form">
+                <form id="my-form" class="needs-validation" novalidate>
 
 
                     <div class="form-group">
@@ -81,27 +77,50 @@
                         <div class="invalid-feedback">Age is required</div>
                     </div>
 
-                    <div class="checkbox">
-                        <label for="flag">Colors of the Flag</label><br>
-                        <label><input type="checkbox" value="">Red</label>
+
+                    <label>Colors of the Flag</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"  id="redCheck">
+                        <label class="form-check-label" for="redCheck">
+                            Red
+                        </label>
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="">Blue</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"  id="blueCheck">
+                        <label class="form-check-label" for="bluetCheck">
+                            Blue
+                        </label>
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="">Green</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"  id="greenCheck">
+                        <label class="form-check-label" for="greenCheck">
+                            Green
+                        </label>
                     </div>
 
-                    <div class=".radio-inline">
-                        <label for="grade">Choose Your Current Grade:</label><br>
-                        <!-- <input type="" id="grade" name="grade" class="form-control" aria-describedby="grade"> -->
-                        <label class="radio-inline"><input type="radio" name="optradio">Freshman</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">Sophomore</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">Junior</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">Senior</label>
-                        <div class="valid-feedback"></div>
 
-                        <div class="invalid-feedback">grade is required</div>
+                    <label for="grade">Choose Your Current Grade:</label><br>
+
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="GradeRadio" id="inlineRadio1"
+                            value="Freshman" required>
+                        <label class="form-check-label" for="inlineRadio1">Freshman</label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="GradeRadio" id="inlineRadio2"
+                            value="Sophomore" required>
+                        <label class="form-check-label" for="inlineRadio2">Sophomore</label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="GradeRadio" id="inlineRadio3"
+                            value="Junior" required>
+                        <label class="form-check-label" for="inlineRadio3">Junior</label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="GradeRadio" id="inlineRadio4"
+                            value="Senior" required>
+                        <label class="form-check-label" for="inlineRadio4">Senior</label>
+                        <div class="invalid-feedback">Please select one of the choices.</div>
                     </div>
 
                     <div class="form-group">
@@ -147,15 +166,13 @@
 
             </div>
 
-
-
-
         </div>
 
 
-         <div class="row footer" style="background-color: black;padding-top:30px;padding-bottom:30px">
+        <div class="row footer" style="background-color: black;padding-top:30px;padding-bottom:30px">
+
             <div class="col-sm-1">
-                <img src="images/rlogo.png" class="img-fluid rounded" />
+                <img src="./images/rlogo.png" class="img-fluid rounded" />
             </div>
 
             <div class="col-sm-3">
@@ -175,10 +192,10 @@
                 <p style="text-align:center"><a href="http://www.google.com">Google</a></p>
                 <p style="text-align:center"><a href="http://www.google.com">Google</a> </p>
 
-                 <!-- <p>All rights reserved blah blah</p>  -->
+
             </div>
 
-        </div> 
+        </div>
 
     </div>
 
