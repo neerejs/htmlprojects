@@ -62,17 +62,32 @@
         // let blue = $("#blueCheck").val();
         // let green = $("#greenCheck").val();
         let grade = $("input[name=GradeRadio]:checked").val()
-        let color = $("input[name=colorPick]:checked").val()
-        let color2 = $("input[name=colorPick2]:checked").val()
-        let color3 = $("input[name=colorPick3]:checked").val()
+        // let color = $("input[name=colorPick]:checked").val()
+        // let color2 = $("input[name=colorPick2]:checked").val()
+        // let color3 = $("input[name=colorPick3]:checked").val()
+        // let colors = $("input[name=colorPick]:checked")
+        
+        //   colors.forEach((color, index) => {
+        //   console.log ("colors selected:" + color.value);
+
+        // })
+
+        var selectedColors  = new Array();
+        $("input[name=colorPick]:checked").each(function() {
+          selectedColors.push($(this).val());
+});
+
+
+
         let college = $("#college").val();
         alert("fname:" + fname + "\n" +
           "Email:" + email + "\n" +
           "Age:" + age + "\n" +
+          "Color of Flag:" + selectedColors + "\n" +
 
-          "color:" + color + "\n" +
-          "color2:" + color2 + "\n" +
-          "color3:" + color3 + "\n" +
+          // "color:" + color + "\n" +
+          // "color2:" + color2 + "\n" +
+          // "color3:" + color3 + "\n" +
           // "blue:" + blue +"\n" +
           // "green:" + green +"\n" +
           "grade:" + grade + "\n" +
